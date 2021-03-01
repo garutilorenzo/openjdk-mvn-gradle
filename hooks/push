@@ -8,9 +8,9 @@
 # original docker push command
 echo "overwriting docker push $IMAGE_NAME"
 
-cat "../mvn-versions.txt" | while read mvn_version
+cat "mvn-versions.txt" | while read mvn_version
 do
-    cat "../gradle-versions.txt" | while read gradle_version
+    cat "gradle-versions.txt" | while read gradle_version
     do
         # The new image tag will include the version of our software, prefixed to the os image we're currently building
         IMAGE_TAG="${DOCKER_REPO}:8-jdk-alpine-mvn-${mvn_version}-gradle${gradle_version}"
