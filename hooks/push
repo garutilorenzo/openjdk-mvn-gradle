@@ -13,7 +13,7 @@ do
     for gradle_version in 6.8.3 6.8.2 6.8.1 6.8
     do
         # The new image tag will include the version of our software, prefixed to the os image we're currently building
-        IMAGE_TAG="${DOCKER_REPO}:8-jdk-alpine-mvn-${mvn_version}-gradle-${gradle_version}"
+        IMAGE_TAG="${DOCKER_REPO}:16-jdk-alpine-mvn-${mvn_version}-gradle-${gradle_version}"
 
         echo "docker push ${IMAGE_TAG}"
         docker push ${IMAGE_TAG}
