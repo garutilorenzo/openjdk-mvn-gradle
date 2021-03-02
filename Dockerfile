@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-alpine as base
+FROM openjdk:14-jdk-alpine as base
 
 RUN apk add --no-cache curl tar bash procps
 
